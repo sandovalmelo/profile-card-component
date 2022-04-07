@@ -41,6 +41,7 @@ main {
 	overflow: hidden;
 	width: 100%;
 	max-width: 24rem;
+	box-shadow: 0px 1px 15px -2px hsla(229, 23%, 23%, 0.3);
 }
 
 .profile-header {
