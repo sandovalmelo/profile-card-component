@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+:root {
+	--main-bg-color: hsl(185, 75%, 39%);
+	--main-text-color: hsl(229, 23%, 23%);
+	--secondary-text-color: hsl(227, 10%, 46%);
+	--dark-grey: hsl(0, 0%, 59%);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--main-bg-color);
+	background-image: url("./../images/bg-pattern-top.svg"),
+		url("./../images/bg-pattern-bottom.svg");
+	background-repeat: no-repeat, no-repeat;
+	background-size: cover, cover;
+	background-position: top -350px left -420px, bottom -350px right -420px;
+
+	font-family: "Kumbh Sans", sans-serif;
+	color: var(--secondary-text-color);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	background-color: white;
+	text-align: center;
+	margin: 1rem;
+	border-radius: 10px;
+	overflow: hidden;
+	width: 100%;
+	max-width: 24rem;
+}
+
+.profile-header {
+	background-image: url("../images/bg-pattern-card.svg");
+	height: 10rem;
+	position: relative;
+}
+
+.profile-img {
+	display: inline-flex;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.profile-img img {
+	border-radius: 50%;
+	border: 5px solid white;
+	max-width: 100%;
+	display: block;
+}
+
+.profile-name {
+	color: var(--main-text-color);
+	grid-column: 2 / 3;
+	font-size: 1.5rem;
+}
+
+.profile-info {
+	display: grid;
+	grid-template-columns: 1fr max-content max-content 1fr;
+	margin: 4rem auto 0;
+	align-items: center;
+	gap: 0.5rem 1rem;
+}
+
+.profile-age {
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.profile-city {
+	grid-column: 1 / -1;
+}
+
+.profile-social-media {
+	margin-top: 2.5rem;
+	padding: 1rem;
+	border-top: 1px solid hsla(0, 0%, 59%, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.social-media-info .number {
+	color: var(--main-text-color);
+	font-weight: 700;
+	display: block;
+	font-size: 1.25rem;
+}
+
+.social-media-info .text {
+	font-size: 0.75rem;
+}
+
+@media (min-width: 792px) {
+	body {
+		background-size: cover, cover;
+		background-position: top -450px left -520px, bottom -450px right -520px;
+	}
+}
+
+@media (min-width: 900px) {
+	body {
+		background-size: auto, auto;
+		background-position: bottom 400px left -400px, top 400px right -400px;
+	}
+}
+
+@media (min-width: 1250px) {
+	body {
+		background-size: auto, auto;
+		background-position: bottom 300px left -200px, top 300px right -200px;
+	}
+}
